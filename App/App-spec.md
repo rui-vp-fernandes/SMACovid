@@ -54,6 +54,7 @@ App:
 
   ### LD Example
 
+```json
   {
       "id": "urn:ngsi-ld:App:001",
       "type": "App",
@@ -86,6 +87,7 @@ App:
           "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
       ]
   }
+```
 
 
   ## Use it with a real service
