@@ -84,7 +84,6 @@ Wearable:
           "type": "Relationship",
           "object": "urn:ngsi-ld:Person:001"
       },
-
     "@context": [
         "https://raw.githubusercontent.com/rui-vp-fernandes/Fiware/main/context.jsonld",
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
