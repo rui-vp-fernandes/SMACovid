@@ -8,7 +8,7 @@
     "properties": {
       "type": {
         "type": "string",
-        "enum": ["APP"],
+        "enum": ["App"],
         "description": "NGSI-LD Entity type"
       },
       "dyspnoea": {
