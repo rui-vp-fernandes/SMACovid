@@ -11,22 +11,23 @@
         "enum": ["Wearable"],
         "description": "NGSI-LD Entity type"
       },
-      "dyspnoea": {
-        "type": "booblean"
+      "bloodPressure": {
+        "type": "integer",
+        "minimum": 0
       },
-      "cough": {
-        "type": "boolean"
+      "oxygenSaturation": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
       },
-      "anosmia": {
-        "type": "boolean"
-      },
-      "contactCovid": {
-        "type": "boolean"
-      },
-      "diarrhea": {
+      "temperature": {
         "type": "integer"
       },
-      "hasInfoAbout": {
+      "heartRate": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "isOwnedBy": {
         "type": "string",
         "format": "uri"
       },
