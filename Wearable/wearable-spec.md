@@ -23,7 +23,7 @@ Wearable:
               -   Type: [DateTime](https://schema.org/DateTime)
               -   Optional
           -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Type: "string"
               -   Optional
       - description: Measured arterial pressure by the wearable device
     - oxygenSaturation:
@@ -38,7 +38,7 @@ Wearable:
               -   Type: [DateTime](https://schema.org/DateTime)
               -   Optional
           -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Type: "string"
               -   Optional
       - description: Measured oxygen saturation by the wearable device
     - temperature:
@@ -52,7 +52,7 @@ Wearable:
               -   Type: [DateTime](https://schema.org/DateTime)
               -   Optional
           -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Type: "string"
               -   Optional
       - description: Measured temperature by the wearable device
     - heartRate:
@@ -67,7 +67,7 @@ Wearable:
               -   Type: [DateTime](https://schema.org/DateTime)
               -   Optional
           -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Type: "string"
               -   Optional
       - description: Measured heart rate by the wearable device
     - isOwnedBy:
@@ -76,14 +76,6 @@ Wearable:
         - model: "https://schema.org/URL"
       - type: "string"
       - format: "URL"
-      -   Metadata:
-          -   `timestamp` : Timestamp which reflects the date when the attribute
-              value was obtained.
-              -   Type: [DateTime](https://schema.org/DateTime)
-              -   Optional
-          -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: [DateTime](https://schema.org/DateTime)
-              -   Optional
       - description: Identifies the Person using the wearable
 
 
