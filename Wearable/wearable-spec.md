@@ -1,88 +1,85 @@
-Wearable:
-  - required:
-    - {{A VER DEPOIS}}
-    
-  - type: "object"
-  
   ## Description
   This entity contains a harmonised description of the measurements a wearable device can deliver to a health monitoring system.
         
         
   ## Data Model
-      
-  - properties:  
-    - bloodPressure:
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
-      -   Metadata:
-          -   `timestamp` : Timestamp which reflects the date when the attribute
-              value was obtained.
-              -   Type: [DateTime](https://schema.org/DateTime)
-              -   Optional
-          -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: "string"
-              -   Optional
-      - description: Measured arterial pressure by the wearable device
-    - oxygenSaturation:
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
-      -   Metadata:
-          -   `timestamp` : Timestamp which reflects the date when the attribute
-              value was obtained.
-              -   Type: [DateTime](https://schema.org/DateTime)
-              -   Optional
-          -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: "string"
-              -   Optional
-      - description: Measured oxygen saturation by the wearable device
-    - temperature:
-      - x-ngsi:
-        - type: "Property"
-        - model: "http://www.w3.org/2001/XMLSchema#double"
-      - type: "double"
-      -   Metadata:
-          -   `timestamp` : Timestamp which reflects the date when the attribute
-              value was obtained.
-              -   Type: [DateTime](https://schema.org/DateTime)
-              -   Optional
-          -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: "string"
-              -   Optional
-      - description: Measured temperature by the wearable device
-    - heartRate:
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
-      -   Metadata:
-          -   `timestamp` : Timestamp which reflects the date when the attribute
-              value was obtained.
-              -   Type: [DateTime](https://schema.org/DateTime)
-              -   Optional
-          -   `unitCode` : Definition of used units for the attribute value.
-              -   Type: "string"
-              -   Optional
-      - description: Measured heart rate by the wearable device
-    - isOwnedBy:
-      - x-ngsi:
-        - type: "Relationship"
-        - model: "https://schema.org/URL"
-      - type: "string"
-      - format: "URL"
-      - description: Identifies the Person using the wearable
+
+  The data model is defined as shown below:
+
+  -   `id` : Entity's unique identifier.
+  -   `type` : Entity type. It must be equal to `Wearable`.
+  - bloodPressure:
+    - x-ngsi:
+      - type: "Property"
+      - model: "https://schema.org/Integer"
+    - type: "integer"
+    - format: "int32"
+    -   Metadata:
+        -   `timestamp` : Timestamp which reflects the date when the attribute
+            value was obtained.
+          -   Type: [DateTime](https://schema.org/DateTime)
+          -   Optional
+        -   `unitCode` : Definition of used units for the attribute value.
+          -   Type: "string"
+          -   Optional
+    - description: Measured arterial pressure by the wearable device
+  - oxygenSaturation:
+    - x-ngsi:
+      - type: "Property"
+      - model: "https://schema.org/Integer"
+    - type: "integer"
+    - format: "int32"
+    -   Metadata:
+        -   `timestamp` : Timestamp which reflects the date when the attribute
+            value was obtained.
+            -   Type: [DateTime](https://schema.org/DateTime)
+            -   Optional
+        -   `unitCode` : Definition of used units for the attribute value.
+            -   Type: "string"
+            -   Optional
+    - description: Measured oxygen saturation by the wearable device
+  - temperature:
+    - x-ngsi:
+      - type: "Property"
+      - model: "http://www.w3.org/2001/XMLSchema#double"
+    - type: "double"
+    -   Metadata:
+        -   `timestamp` : Timestamp which reflects the date when the attribute
+            value was obtained.
+            -   Type: [DateTime](https://schema.org/DateTime)
+            -   Optional
+        -   `unitCode` : Definition of used units for the attribute value.
+            -   Type: "string"
+            -   Optional
+    - description: Measured temperature by the wearable device
+  - heartRate:
+    - x-ngsi:
+      - type: "Property"
+      - model: "https://schema.org/Integer"
+    - type: "integer"
+    - format: "int32"
+    -   Metadata:
+        -   `timestamp` : Timestamp which reflects the date when the attribute
+            value was obtained.
+            -   Type: [DateTime](https://schema.org/DateTime)
+            -   Optional
+        -   `unitCode` : Definition of used units for the attribute value.
+            -   Type: "string"
+            -   Optional
+    - description: Measured heart rate by the wearable device
+  - isOwnedBy:
+    - x-ngsi:
+      - type: "Relationship"
+      - model: "https://schema.org/URL"
+    - type: "string"
+    - format: "URL"
+    - description: Identifies the Person using the wearable
 
 
 
-  ## Examples of use
+## Examples of use
 
-  ### LD Example
+### LD Example
 
 ```json
   {
@@ -124,10 +121,10 @@ Wearable:
 ```
 
 
-  ## Use it with a real service
+## Use it with a real service
 
-  {{Provide a link to a real service providing data following the harmonized data format}}
+{{Provide a link to a real service providing data following the harmonized data format}}
 
-  ## Open Issues
+## Open Issues
 
-  {{Describe here any open issue}}
+{{Describe here any open issue}}
