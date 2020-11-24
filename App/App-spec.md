@@ -16,32 +16,32 @@ App:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#boolean"
       - type: "boolean"
-      - description: Measured arterial pressure
+      - description: Identification of dyspnoea existence
     - cough:
       - x-ngsi:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#boolean"
       - type: "boolean"
-      - description: Measured oxygen saturation
+      - description: Identification of cough existence
     - anosmia:
       - x-ngsi:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#boolean"
       - type: "boolean"
-      - description: Measured temperature
+      - description: Identification of anosmia existence
     - contactCovid:
       - x-ngsi:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#boolean"
       - type: "boolean"
-      - description: Number of floors above ground within the building
+      - description: Identification of contact with a COVID-19 infected person 
     - diarrhea:
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
-      - description: Number of floors above ground within the building
+      - description: Number of times the person suffered from diarrhea during the present day
     - isOwnedBy:
       - x-ngsi:
         - type: "Relationship"
