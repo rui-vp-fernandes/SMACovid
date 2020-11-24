@@ -1,17 +1,11 @@
-App:
-  - required:
-    - {{A VER DEPOIS}}
-    
-  - type: "object"
-  
-  ## Description
-  This entity contains a harmonised description of the information a Person defines using an app, to be delivered to a health monitoring system.
+## Description
+This entity contains a harmonised description of the information a Person defines using an app, to be delivered to a health monitoring system.
         
         
-  ## Data Model
+## Data Model
       
-  - properties:  
-    - dyspnoea:
+- properties:  
+  - dyspnoea:
       - x-ngsi:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#boolean"
