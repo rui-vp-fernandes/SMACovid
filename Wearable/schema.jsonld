@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/rui-vp-fernandes/SMACovid/edit/main/App/schema.jsonld",
-  "title": "SMACovid-19 - App schema",
-  "description": "Information provided by a given App",
+  "$id": "https://github.com/rui-vp-fernandes/SMACovid/blob/main/Wearable/schema.jsonld",
+  "title": "SMACovid-19 - Wearable schema",
+  "description": "Information measured by a given Wearable device",
   "type": "object",
   {
     "properties": {
       "type": {
         "type": "string",
-        "enum": ["APP"],
+        "enum": ["Wearable"],
         "description": "NGSI-LD Entity type"
       },
       "dyspnoea": {
