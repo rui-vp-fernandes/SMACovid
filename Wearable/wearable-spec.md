@@ -54,37 +54,42 @@ Wearable:
 
 ```json
   {
-      "id": "urn:ngsi-ld:App:001",
-      "type": "App",
-      "dyspnoea": {
+      "id": "urn:ngsi-ld:Wearable:002",
+      "type": "Wearable",
+      "bloodPressure": {
           "type": "Property",
-          "value": true
+          "value": 120,
+          "observedAt": "2020-11-22T12:28:00Z",
+          "unitCode": "HN"
       },
-      "cough": {
+      "oxygenSaturation": {
           "type": "Property",
-          "value": true
+          "value": 98,
+          "observedAt": "2020-11-22T12:28:00Z",
+          "unitCode": "C62"
       },
-      "anosmia": {
+      "temperature": {
           "type": "Property",
-          "value": false
+          "value": 35,
+          "observedAt": "2020-11-22T12:28:00Z",
+          "unitCode": "CEL"
       },
-      "contactCovid": {
+      "heartRate": {
           "type": "Property",
-          "value": false
+          "value": 65,
+          "observedAt": "2020-11-22T12:28:00Z",
+          "unitCode": "C62"
       },
-      "diarrhea": {
-          "type": "Property",
-          "value": 3
-      },
-      "hasInfoAbout": {
+      "isOwnedBy": {
           "type": "Relationship",
           "object": "urn:ngsi-ld:Person:001"
       },
-      "@context": [
-          "https://raw.githubusercontent.com/rui-vp-fernandes/Fiware/main/context.jsonld",
-          "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
-      ]
-  }
+
+    "@context": [
+        "https://raw.githubusercontent.com/rui-vp-fernandes/Fiware/main/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
+    ]
+}
 ```
 
 
