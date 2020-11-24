@@ -17,6 +17,14 @@ Wearable:
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
+      -   Metadata:
+          -   `timestamp` : Timestamp which reflects the date when the attribute
+              value was obtained.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
+          -   `unitCode` : Definition of used units for the attribute value.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
       - description: Measured arterial pressure by the wearable device
     - oxygenSaturation:
       - x-ngsi:
@@ -24,12 +32,28 @@ Wearable:
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
+      -   Metadata:
+          -   `timestamp` : Timestamp which reflects the date when the attribute
+              value was obtained.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
+          -   `unitCode` : Definition of used units for the attribute value.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
       - description: Measured oxygen saturation by the wearable device
     - temperature:
       - x-ngsi:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#double"
       - type: "double"
+      -   Metadata:
+          -   `timestamp` : Timestamp which reflects the date when the attribute
+              value was obtained.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
+          -   `unitCode` : Definition of used units for the attribute value.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
       - description: Measured temperature by the wearable device
     - heartRate:
       - x-ngsi:
@@ -37,6 +61,14 @@ Wearable:
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
+      -   Metadata:
+          -   `timestamp` : Timestamp which reflects the date when the attribute
+              value was obtained.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
+          -   `unitCode` : Definition of used units for the attribute value.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
       - description: Measured heart rate by the wearable device
     - isOwnedBy:
       - x-ngsi:
@@ -44,6 +76,14 @@ Wearable:
         - model: "https://schema.org/URL"
       - type: "string"
       - format: "URL"
+      -   Metadata:
+          -   `timestamp` : Timestamp which reflects the date when the attribute
+              value was obtained.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
+          -   `unitCode` : Definition of used units for the attribute value.
+              -   Type: [DateTime](https://schema.org/DateTime)
+              -   Optional
       - description: Identifies the Person using the wearable
 
 
