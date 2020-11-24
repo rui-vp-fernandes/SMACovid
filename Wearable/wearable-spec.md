@@ -17,27 +17,27 @@ Wearable:
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
-      - description: Measured arterial pressure
+      - description: Measured arterial pressure by the wearable device
     - oxygenSaturation:
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
-      - description: Measured oxygen saturation
+      - description: Measured oxygen saturation by the wearable device
     - temperature:
       - x-ngsi:
         - type: "Property"
         - model: "http://www.w3.org/2001/XMLSchema#double"
       - type: "double"
-      - description: Measured temperature
+      - description: Measured temperature by the wearable device
     - heartRate:
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/Integer"
       - type: "integer"
       - format: "int32"
-      - description: Number of floors above ground within the building
+      - description: Measured heart rate by the wearable device
     - isOwnedBy:
       - x-ngsi:
         - type: "Relationship"
