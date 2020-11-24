@@ -1,7 +1,7 @@
   ## Description
   This entity contains a harmonised description of the measurements a wearable device can deliver to a health monitoring system.
         
-        
+       
   ## Data Model
 
   The data model is defined as shown below:
