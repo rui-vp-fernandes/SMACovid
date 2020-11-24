@@ -14,31 +14,28 @@ App:
     - dyspnoea:
       - x-ngsi:
         - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
+        - model: "http://www.w3.org/2001/XMLSchema#boolean"
+      - type: "boolean"
       - description: Measured arterial pressure
     - cough:
       - x-ngsi:
         - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
+        - model: "http://www.w3.org/2001/XMLSchema#boolean"
+      - type: "boolean"
       - description: Measured oxygen saturation
     - anosmia:
       - x-ngsi:
         - type: "Property"
-        - model: "http://www.w3.org/2001/XMLSchema#double"
-      - type: "double"
+        - model: "http://www.w3.org/2001/XMLSchema#boolean"
+      - type: "boolean"
       - description: Measured temperature
     - contactCovid:
       - x-ngsi:
         - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
+        - model: "http://www.w3.org/2001/XMLSchema#boolean"
+      - type: "boolean"
       - description: Number of floors above ground within the building
-    - contactCovid:
+    - diarrhea:
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/Integer"
