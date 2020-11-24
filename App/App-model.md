@@ -49,3 +49,16 @@ App:
       - type: "string"
       - format: "URL"
       - description: Identifies the Person using the wearable
+
+  ## Examples of use
+
+  ### LD Example
+
+
+  ## Use it with a real service
+
+  {{Provide a link to a real service providing data following the harmonized data format}}
+
+  ## Open Issues
+
+  {{Describe here any open issue}}
