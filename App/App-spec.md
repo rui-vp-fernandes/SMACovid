@@ -1,52 +1,55 @@
-## Description
-This entity contains a harmonised description of the information a Person defines using an app, to be delivered to a health monitoring system.
+  # App
+  
+  ## Description
+  This entity contains a harmonised description of the information a Person defines using an app, to be delivered to a health monitoring system.
         
         
-## Data Model
-      
-- properties:  
+  ## Data Model
+  The data model is defined as shown below:
+
+  -   `id` : Entity's unique identifier.
+  -   `type` : Entity type. It must be equal to `Wearable`.
   - dyspnoea:
-      - x-ngsi:
-        - type: "Property"
-        - model: "http://www.w3.org/2001/XMLSchema#boolean"
-      - type: "boolean"
-      - description: Identification of dyspnoea existence
-    - cough:
-      - x-ngsi:
-        - type: "Property"
-        - model: "http://www.w3.org/2001/XMLSchema#boolean"
-      - type: "boolean"
-      - description: Identification of cough existence
-    - anosmia:
-      - x-ngsi:
-        - type: "Property"
-        - model: "http://www.w3.org/2001/XMLSchema#boolean"
-      - type: "boolean"
-      - description: Identification of anosmia existence
-    - contactCovid:
-      - x-ngsi:
-        - type: "Property"
-        - model: "http://www.w3.org/2001/XMLSchema#boolean"
-      - type: "boolean"
-      - description: Identification of contact with a COVID-19 infected person 
-    - diarrhea:
-      - x-ngsi:
-        - type: "Property"
-        - model: "https://schema.org/Integer"
-      - type: "integer"
-      - format: "int32"
-      - description: Number of times the person suffered from diarrhea during the present day
-    - isOwnedBy:
-      - x-ngsi:
-        - type: "Relationship"
-        - model: "https://schema.org/URL"
-      - type: "string"
-      - format: "URL"
-      - description: Identifies the Person using the wearable
+    - x-ngsi:
+      - type: "Property"
+      - model: "http://www.w3.org/2001/XMLSchema#boolean"
+    - type: "boolean"
+    - description: Identification of dyspnoea existence
+  - cough:
+    - x-ngsi:
+      - type: "Property"
+      - model: "http://www.w3.org/2001/XMLSchema#boolean"
+    - type: "boolean"
+    - description: Identification of cough existence
+  - anosmia:
+    - x-ngsi:
+      - type: "Property"
+      - model: "http://www.w3.org/2001/XMLSchema#boolean"
+    - type: "boolean"
+    - description: Identification of anosmia existence
+  - contactCovid:
+    - x-ngsi:
+      - type: "Property"
+      - model: "http://www.w3.org/2001/XMLSchema#boolean"
+    - type: "boolean"
+    - description: Identification of contact with a COVID-19 infected person 
+  - diarrhea:
+    - x-ngsi:
+      - type: "Property"
+      - model: "https://schema.org/Integer"
+    - type: "integer"
+    - format: "int32"
+    - description: Number of times the person suffered from diarrhea during the present day
+  - isOwnedBy:
+    - x-ngsi:
+      - type: "Relationship"
+      - model: "https://schema.org/URL"
+    - type: "string"
+    - format: "URL"
+    - description: Identifies the Person using the wearable
+ ## Examples of use
 
-  ## Examples of use
-
-  ### LD Example
+### LD Example
 
 ```json
   {
@@ -84,10 +87,10 @@ This entity contains a harmonised description of the information a Person define
 ```
 
 
-  ## Use it with a real service
+## Use it with a real service
 
-  {{Provide a link to a real service providing data following the harmonized data format}}
+{{Provide a link to a real service providing data following the harmonized data format}}
 
-  ## Open Issues
+## Open Issues
 
-  {{Describe here any open issue}}
+{{Describe here any open issue}}
