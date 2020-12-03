@@ -100,4 +100,4 @@ Sample uses the NGSI-LD representation
 
 ## Open Issues
 
-{{Describe here any open issue}}
+{{Describe here any open issuesss}}
