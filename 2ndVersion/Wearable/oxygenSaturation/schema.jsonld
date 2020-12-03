@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/rui-vp-fernandes/SMACovid/blob/main/2ndVersion/Wearable/oxygenSaturation/schema.jsonld",
+  "$id": "https://github.com/rui-vp-fernandes/SMACovid/blob/main/2ndVersion/Wearable/OxygenSaturation/schema.jsonld",
   "title": "SMACovid-19 - Wearable schema",
   "description": "Information measured by a given Wearable device",
   "type": "object",
@@ -8,26 +8,15 @@
     "properties": {
       "type": {
         "type": "string",
-        "enum": ["Wearable"],
+        "enum": ["OxygenSaturation"],
         "description": "NGSI-LD Entity type"
       },
-      "bloodPressure": {
-        "type": "integer",
-        "minimum": 0
-      },
-      "oxygenSaturation": {
+      "oxygenSaturationValue": {
         "type": "integer",
         "minimum": 0,
         "maximum": 100
       },
-      "temperature": {
-        "type": "integer"
-      },
-      "heartRate": {
-        "type": "integer",
-        "minimum": 0
-      },
-      "isOwnedBy": {
+      "hasInfoAbout": {
         "type": "string",
         "format": "uri"
       },
