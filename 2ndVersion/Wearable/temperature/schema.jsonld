@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/rui-vp-fernandes/SMACovid/blob/main/2ndVersion/Wearable/temperature/schema.jsonld",
+  "$id": "https://github.com/rui-vp-fernandes/SMACovid/blob/main/2ndVersion/Wearable/Temperature/schema.jsonld",
   "title": "SMACovid-19 - Wearable schema",
   "description": "Information measured by a given Wearable device",
   "type": "object",
@@ -11,23 +11,10 @@
         "enum": ["Temperature"],
         "description": "NGSI-LD Entity type"
       },
-      "bloodPressure": {
-        "type": "integer",
-        "minimum": 0
-      },
-      "oxygenSaturation": {
-        "type": "integer",
-        "minimum": 0,
-        "maximum": 100
-      },
-      "temperature": {
+      "temperatureValue": {
         "type": "integer"
       },
-      "heartRate": {
-        "type": "integer",
-        "minimum": 0
-      },
-      "isOwnedBy": {
+      "hasInfoAbout": {
         "type": "string",
         "format": "uri"
       },
