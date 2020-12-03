@@ -8,26 +8,14 @@
     "properties": {
       "type": {
         "type": "string",
-        "enum": ["Wearable"],
+        "enum": ["BloodPressure"],
         "description": "NGSI-LD Entity type"
       },
-      "bloodPressure": {
+      "bloodPressureValue": {
         "type": "integer",
         "minimum": 0
       },
-      "oxygenSaturation": {
-        "type": "integer",
-        "minimum": 0,
-        "maximum": 100
-      },
-      "temperature": {
-        "type": "integer"
-      },
-      "heartRate": {
-        "type": "integer",
-        "minimum": 0
-      },
-      "isOwnedBy": {
+      "hasInfoAbout": {
         "type": "string",
         "format": "uri"
       },
