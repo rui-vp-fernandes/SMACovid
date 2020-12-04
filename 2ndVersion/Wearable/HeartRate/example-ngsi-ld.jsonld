@@ -1,31 +1,13 @@
 {
-    "id": "urn:ngsi-ld:Wearable:002",
-    "type": "Wearable",
-    "bloodPressure": {
-        "type": "Property",
-        "value": 120,
-        "observedAt": "2020-11-22T12:28:00Z",
-        "unitCode": "HN"
-    },
-    "oxygenSaturation": {
-        "type": "Property",
-        "value": 98,
-        "observedAt": "2020-11-22T12:28:00Z",
-        "unitCode": "C62"
-    },
-    "temperature": {
-        "type": "Property",
-        "value": 35,
-        "observedAt": "2020-11-22T12:28:00Z",
-        "unitCode": "CEL"
-    },
+    "id": "urn:ngsi-ld:HeartRate:001",
+    "type": "HeartRate",
     "heartRate": {
         "type": "Property",
         "value": 65,
         "observedAt": "2020-11-22T12:28:00Z",
         "unitCode": "C62"
     },
-    "isOwnedBy": {
+    "hasInfoAbout": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Person:001"
     },
