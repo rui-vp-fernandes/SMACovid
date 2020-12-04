@@ -1,8 +1,8 @@
-# Wearable
+# HeartRate
 
 ## Description
 
-This entity contains a harmonised description of the measurements a wearable device can deliver to a health monitoring system.
+This entity contains a harmonised description of the heart rate measurements a wearable device can deliver to a health monitoring system.
 
 ## Data Model
 
@@ -10,43 +10,7 @@ The data model is defined as shown below:
 
 -   `id` : Entity's unique identifier.
 
--   `type` : Entity type. It must be equal to `Wearable`.
-
--   `bloodPressure` : Measured arterial pressure by the wearable device.
-    -   Attribute type: Property. [Number](https://schema.org/Number)
-    -   Metadata:
-        -   `timestamp` : Timestamp which reflects the date when the attribute
-            value was obtained.
-            -   Type: [DateTime](https://schema.org/DateTime)
-            -   Optional
-        -   `unitCode` : Definition of used units for the attribute value.
-            -   Type: [Text](https://schema.org/Text)
-            -   Optional
-    -   Mandatory
-
--   `oxygenSaturation` : Measured oxygen saturation by the wearable device.
-    -   Attribute type: Property. [Number](https://schema.org/Number)
-    -   Metadata:
-        -   `timestamp` : Timestamp which reflects the date when the attribute
-            value was obtained.
-            -   Type: [DateTime](https://schema.org/DateTime)
-            -   Optional
-        -   `unitCode` : Definition of used units for the attribute value.
-            -   Type: [Text](https://schema.org/Text)
-            -   Optional
-    -   Mandatory
-
--   `temperature` : Measured temperature by the wearable device.
-    -   Attribute type: Property. [Number](https://schema.org/Number)
-    -   Metadata:
-        -   `timestamp` : Timestamp which reflects the date when the attribute
-            value was obtained.
-            -   Type: [DateTime](https://schema.org/DateTime)
-            -   Optional
-        -   `unitCode` : Definition of used units for the attribute value.
-            -   Type: [Text](https://schema.org/Text)
-            -   Optional
-    -   Mandatory
+-   `type` : Entity type. It must be equal to `HeartRate`.
 
 -   `heartRate` : Measured heart rate by the wearable device.
     -   Attribute type: Property. [Number](https://schema.org/Number)
@@ -60,7 +24,7 @@ The data model is defined as shown below:
             -   Optional
     -   Mandatory
 
--   `isOwnedBy` : 
+-   `hasInfoAbout` : 
     -   Attribute type: Relationship. Reference to an entity of type `Person`.
     -   Optional
 
@@ -78,7 +42,7 @@ Sample uses the NGSI-LD representation
 
 ```json
 {
-  "id": "urn:ngsi-ld:Wearable:002",
+  "id": "urn:ngsi-ld:HeartRate:002",
   "type": "Wearable",
   "bloodPressure": {
     "type": "Property",
