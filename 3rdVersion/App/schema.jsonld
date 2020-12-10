@@ -33,5 +33,5 @@
       },
     },
   }
-  "required": ["type", "id"]
+  "required": ["type", "id", "dyspnoea", "cough", "anosmia", "contactCovid", "diarrhea", "knowsAbout"]
 }
