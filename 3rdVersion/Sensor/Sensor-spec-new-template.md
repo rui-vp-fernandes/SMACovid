@@ -40,7 +40,7 @@ Sample uses the NGSI-LD representation
 {
   "id": "urn:ngsi-ld:Sensor:005",
   "type": "Sensor",
-  "measurementType": 
+  "measurementType": {
     "type": "Property",
     "value": "heartRate",
   },
