@@ -34,7 +34,7 @@ The data model is defined as shown below:
 
 -   `knowsAbout` : Identifies the Person using the wearable.
     -   Attribute type: Relationship. Reference to an entity of type `Person`.
-    -   Optional
+    -   Mandatory
 
 
 
