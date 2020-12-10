@@ -1,0 +1,147 @@
+{
+  "@context": {
+    "type": "@type",
+    "id":"@id",
+    "schema": "https://schema.org/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "smacovidbase": "https://github.com/rui-vp-fernandes/Fiware/blob/master/main/",
+    "BloodPressure": "smacovidbase:BloodPressure",
+    "HeartRate": "smacovidbase:HeartRate",
+    "OxygenSaturation": "smacovidbase:OxygenSaturation",
+    "Temperature": "smacovidbase:Temperature",
+    "App": "smacovidbase:App",
+    "Person": "schema:Person",
+    "address": "schema:address",
+    "bloodPressureValue": {
+      "@id": "smacovidbase:bloodPressureValue",
+      "@type":"xsd:integer"
+    },
+    "oxygenSaturationValue": {
+      "@id": "smacovidbase:oxygenSaturationValue",
+      "@type":"xsd:integer"
+    },
+    "temperatureValue": {
+      "@id": "smacovidbase:temperatureValue",
+      "@type":"xsd:double"
+    },
+    "heartRateValue": {
+      "@id": "smacovidbase:heartRateValue",
+      "@type":"xsd:integer"
+    },
+    "hasInfoAbout": {
+      "@id": "smacovidbase:hasInfoAbout",
+      "@type":"@id"
+    },
+    "dyspnoea": {
+      "@id": "smacovidbase:dyspnoea",
+      "@type":"xsd:boolean"
+    },
+    "cough": {
+      "@id": "smacovidbase:cough",
+      "@type":"xsd:boolean"
+    },
+    "anosmia": {
+      "@id": "smacovidbase:anosmia",
+      "@type":"xsd:boolean"
+    },
+    "contactCovid": {
+      "@id": "smacovidbase:contactCovid",
+      "@type":"xsd:boolean"
+    },
+    "diarrhea": {
+      "@id": "smacovidbase:diarrhea",
+      "@type":"xsd:integer"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "smacovidbase:BloodPressure",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Blood Pressure measured by a Wearable device",
+      "rdfs:label": "BloodP",
+      "rdfs:subClassOf": {
+        "@id": "http://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "smacovidbase:HeartRate",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Heart Rate measured by a Wearable device",
+      "rdfs:label": "HeartR",
+      "rdfs:subClassOf": {
+        "@id": "http://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "smacovidbase:OxygenSaturation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Oxygen Saturation measured by a Wearable device",
+      "rdfs:label": "OxygenS",
+      "rdfs:subClassOf": {
+        "@id": "http://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "smacovidbase:Temperature",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Temperature measured by a Wearable device",
+      "rdfs:label": "Temp",
+      "rdfs:subClassOf": {
+        "@id": "http://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "smacovidbase:App",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An App is an information provider about about characteristics of its user",
+      "rdfs:label": "App",
+      "rdfs:subClassOf": {
+        "@id": "http://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "schema:Person",
+      "@type": "rdfs:Class",
+      "http://purl.org.dc/terms/source": {
+        "@id": "http://w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews"
+      },
+      "http://www.w3.org/2002/07/owl#equivalentClass": {
+        "@id": "http://xmlns.com/foaf/0.1/Person"
+      },
+      "rdfs:comment": "A person...",
+      "rdfs:label": "Person",
+      "rdfs:subClassOf": {
+        "@id": "http://schema.org/Thing"
+      }
+    },
+    {
+      "@id": "smacovidbase:hasInfoAbout",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "smacovidbase:App"
+        },
+        {
+          "@id": "smacovidbase:BloodPressure"
+        },
+        {
+          "@id": "smacovidbase:HeartRate"
+        },
+        {
+          "@id": "smacovidbase:OxygenSaturation"
+        },
+        {
+          "@id": "smacovidbase:Temperature"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "rdfs:comment": "Person using the App at the moment",
+      "rdfs:label": "hasInfoAbout"
+    }
+  ]
+}

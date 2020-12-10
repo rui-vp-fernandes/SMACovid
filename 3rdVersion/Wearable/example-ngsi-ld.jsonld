@@ -1,0 +1,29 @@
+{
+    "id": "urn:ngsi-ld:Wearable:002",
+    "type": "Wearable",
+    "hasBloodPressureSensor": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Sensor:005"
+    },
+    "hasHeartRateSensor": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Sensor:006"
+    },
+    "hasTemperatureSensor": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Sensor:007"
+    },
+    "hasOxygenSaturationSensor": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Sensor:008"
+    },
+    "knowsAbout": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Person:001"
+    },
+
+    "@context": [
+        "https://github.com/rui-vp-fernandes/SMACovid/blob/main/2ndVersion/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
+    ]
+}

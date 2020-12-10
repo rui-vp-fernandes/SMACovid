@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://github.com/rui-vp-fernandes/SMACovid/blob/main/3rdVersion/Sensor/schema.jsonld",
+  "title": "SMACovid-19 - Generic data sensor schema",
+  "description": "Entity that hold's data received from a sensor",
+  "type": "object",
+  {
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": ["Sensor"],
+        "description": "NGSI-LD Entity type"
+      },
+      "measurementType": {
+        "type": "string",
+        "minimum": 0
+      },
+      "sensorValue": {
+        "type": "Number",
+        "minimum": 0
+      },
+      "obsTime": {
+        "type": "string",
+        "format": "uri"
+      },
+    },
+  }
+  "required": ["type", "id"]
+}

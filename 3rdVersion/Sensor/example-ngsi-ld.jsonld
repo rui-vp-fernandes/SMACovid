@@ -1,0 +1,21 @@
+{
+    "id": "urn:ngsi-ld:Sensor:002",
+    "type": "Sensor",
+    "measurementType": {
+        "type": "Property",
+        "value": "heartRate",
+    },
+    "sensorValue": {
+        "type": "Property",
+        "value": 78,
+    },
+    "obsTime": {
+        "type": "Property",
+        "value": "2020-11-22T12:28:00Z",
+    },
+
+    "@context": [
+        "https://github.com/rui-vp-fernandes/SMACovid/blob/main/2ndVersion/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
+    ]
+}
