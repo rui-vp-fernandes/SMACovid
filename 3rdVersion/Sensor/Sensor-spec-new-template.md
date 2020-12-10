@@ -1,8 +1,8 @@
-# Wearable
+# Sensor
 
 ## Description
 
-This entity contains a harmonised description of one of the measurements a wearable device can deliver to a health monitoring system - Blood Pressure.
+This entity contains a harmonised description of a generic sensor data gathering structure. This allows its usage for all sensor read variables within the SMACovid application.
 
 ## Data Model
 
@@ -10,22 +10,18 @@ The data model is defined as shown below:
 
 -   `id` : Entity's unique identifier.
 
--   `type` : Entity type. It must be equal to `Wearable`.
+-   `type` : Entity type. It must be equal to `Sensor`.
 
--   `bloodPressure` : Measured arterial pressure by the wearable device.
-    -   Attribute type: Property. [Number](https://schema.org/Number)
-    -   Metadata:
-        -   `timestamp` : Timestamp which reflects the date when the attribute
-            value was obtained.
-            -   Type: [DateTime](https://schema.org/DateTime)
-            -   Optional
-        -   `unitCode` : Definition of used units for the attribute value.
-            -   Type: [Text](https://schema.org/Text)
-            -   Optional
+-   `measurementType` : Identification of the measured variable by the wearable device.
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Mandatory
 
--   `hasInfoAbout` : 
-    -   Attribute type: Relationship. Reference to an entity of type `Person`.
+-   `sensorValue` : Measured value.
+    -   Attribute type: Property. [Number](https://schema.org/Number)
+    -   Mandatory
+
+-   `obsTime` : 
+    -   Attribute type: Property. [Date](https://schema.org/Date)
     -   Optional
 
 
@@ -42,17 +38,19 @@ Sample uses the NGSI-LD representation
 
 ```json
 {
-  "id": "urn:ngsi-ld:BloodPressure:Person002",
-  "type": "BloodPressure",
-  "bloodPressureValue": {
+  "id": "urn:ngsi-ld:Sensor:005",
+  "type": "Sensor",
+  "measurementType": 
     "type": "Property",
-    "value": 120,
-    "observedAt": "2020-11-22T12:28:00Z",
-    "unitCode": "HN"
+    "value": "heartRate",
   },
-  "hasInfoAbout": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:Person:002"
+  "sensorValue": {
+    "type": "Property",
+    "value": 78,
+  },
+  "obsTime": {
+    "type": "Property",
+    "value": "2020-11-22T12:28:00Z",
   },
   "@context": [
     "https://raw.githubusercontent.com/rui-vp-fernandes/Fiware/main/context.jsonld",
