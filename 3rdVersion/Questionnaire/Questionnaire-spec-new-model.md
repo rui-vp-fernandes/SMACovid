@@ -1,8 +1,8 @@
-# App
+# Questionnaire
 
 ## Description
 
-This entity contains a harmonised description of the information a Person defines using an app, to be delivered to a health monitoring system.
+This entity contains a harmonised description of the information a Person defines using a questionnaire, to be delivered to a health monitoring system.
 
 ## Data Model
 
@@ -10,7 +10,7 @@ The data model is defined as shown below:
 
 -   `id` : Entity's unique identifier.
 
--   `type` : Entity type. It must be equal to `App`.
+-   `type` : Entity type. It must be equal to `Questionnaire`.
 
 -   `dyspnoea` : Identification of dyspnoea existence.
     -   Attribute type: Property. [Boolean](http://www.w3.org/2001/XMLSchema#boolean)
@@ -50,8 +50,8 @@ Sample uses the NGSI-LD representation
 
 ```json
 {
-  "id": "urn:ngsi-ld:App:001",
-  "type": "App",
+  "id": "urn:ngsi-ld:Questionnaire:001",
+  "type": "Questionnaire",
   "dyspnoea": {
     "type": "Property",
     "value": true
