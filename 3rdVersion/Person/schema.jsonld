@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://github.com/rui-vp-fernandes/SMACovid/edit/main/Person/schema.jsonld",
+  "title": "SMACovid-19 - App schema",
+  "description": "Information about a Person",
+  "type": "object",
+  "allof": [
+    {
+      "$ref: "https://schema.org/Person"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["Person"],
+          "description": "NGSI-LD Entity type"
+        },
+        "givenName": {
+          "type": "string",
+          "description": "Person's first name"
+        },
+        "familyName": {
+          "type": "string",
+          "description": "Person's last name"
+        },
+        "gender": {
+          "type": "string",
+          "enum":[
+            "Female",
+            "Male"
+        ],
+          "description": "Person's gender"
+        },
+        "age": {
+          "type": "integer",
+          "description": "Person's age, in years"
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Person's height, in cm"
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Person's weight, in kg"
+        },
+        "fitbitId": {
+          "type": "string"
+        },
+        "hasApp": {
+          "type": "string",
+          "format": "uri"
+        },
+        "hasWearable": {
+          "type": "string",
+          "format": "uri"
+        },
+      },
+    }
+  ]
+    "required": ["type", "id"]
+}

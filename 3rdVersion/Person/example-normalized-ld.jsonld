@@ -1,0 +1,44 @@
+{
+    "id": "urn:ngsi-ld:Person:015",
+    "type": "Person",
+    "givenName": {
+        "type": "Property",
+        "value": "Manuel"
+    },
+    "familyName": {
+        "type": "Property",
+        "value": "Oliveira"
+    },
+    "gender": {
+        "type": "Property",
+        "value": "Male"
+    },
+    "age": {
+        "type": "Property",
+        "value": 33
+    },
+    "height": {
+        "type": "Property",
+        "value": 175
+    },
+    "weight": {
+        "type": "Property",
+        "value": 73
+    },
+    "fitbitId": {
+        "type": "Property",
+        "value": 73
+    },
+    "hasApp": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:App:003"
+    },
+    "hasWearable": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Wearable:005"
+    },
+    "@context": [
+        "https://raw.githubusercontent.com/rui-vp-fernandes/Fiware/main/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld"
+    ]
+}
