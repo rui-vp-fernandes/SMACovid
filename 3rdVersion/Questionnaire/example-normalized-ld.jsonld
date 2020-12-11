@@ -1,6 +1,6 @@
 {
-    "id": "urn:ngsi-ld:App:001",
-    "type": "App",
+    "id": "urn:ngsi-ld:Questionnaire:001",
+    "type": "Questionnaire",
     "dyspnoea": {
         "type": "Property",
         "value": true
