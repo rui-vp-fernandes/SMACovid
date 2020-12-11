@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/rui-vp-fernandes/SMACovid/edit/main/App/schema.jsonld",
-  "title": "SMACovid-19 - App schema",
-  "description": "Information provided by a given App",
+  "$id": "https://raw.githubusercontent.com/rui-vp-fernandes/SMACovid/main/3rdVersion/Questionnaire/schema.jsonld",
+  "title": "SMACovid-19 - Questionnaire schema",
+  "description": "Information provided manually by the health provider and/or the user.",
   "type": "object",
   {
     "properties": {
       "type": {
         "type": "string",
-        "enum": ["App"],
+        "enum": ["Questionnaire"],
         "description": "NGSI-LD Entity type"
       },
       "dyspnoea": {
