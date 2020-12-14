@@ -6,40 +6,61 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "smacovidbase": "https://github.com/rui-vp-fernandes/Fiware/blob/master/main/",
-    "BloodPressure": "smacovidbase:BloodPressure",
-    "HeartRate": "smacovidbase:HeartRate",
-    "OxygenSaturation": "smacovidbase:OxygenSaturation",
-    "Temperature": "smacovidbase:Temperature",
-    "App": "smacovidbase:App",
+    "Sensor": "smacovidbase:Sensor",
+    "Wearable": "smacovidbase:Wearable",
     "Person": "schema:Person",
+    "givenName": "schema:givenName",
+    "familyName": "schema:familyName",
+    "gender": "schema:gender",
+    "height": "schema:height",
+    "weight": "schema:weight",
+    "birthDate": "schema:birthDate",
     "address": "schema:address",
-    "bloodPressureValue": {
-      "@id": "smacovidbase:bloodPressureValue",
-      "@type":"xsd:integer"
+    "Connection": "smacovidbase:Connection",
+    "Questionnaire": "smacovidbase:Questionnaire",
+    "measurementType": {
+      "@id": "smacovidbase:measurementType",
+      "@type":"xsd:string"
     },
-    "oxygenSaturationValue": {
-      "@id": "smacovidbase:oxygenSaturationValue",
-      "@type":"xsd:integer"
-    },
-    "temperatureValue": {
-      "@id": "smacovidbase:temperatureValue",
+    "sensorValue": {
+      "@id": "smacovidbase:sensorValue",
       "@type":"xsd:double"
     },
-    "heartRateValue": {
-      "@id": "smacovidbase:heartRateValue",
-      "@type":"xsd:integer"
+    "obsTime": {
+      "@id": "smacovidbase:temperatureValue",
+      "@type":"DateTime"
     },
-    "hasInfoAbout": {
-      "@id": "smacovidbase:hasInfoAbout",
+    "knowsAbout": {
+      "@id": "smacovidbase:knowsAbout",
       "@type":"@id"
     },
-    "dyspnoea": {
-      "@id": "smacovidbase:dyspnoea",
-      "@type":"xsd:boolean"
+    "hasBloodPressureSensor": {
+      "@id": "smacovidbase:hasBloodPressureSensor",
+      "@type":"@id"
     },
-    "cough": {
-      "@id": "smacovidbase:cough",
-      "@type":"xsd:boolean"
+    "hasHeartRateSensor": {
+      "@id": "smacovidbase:hasHeartRateSensor",
+      "@type":"@id"
+    },
+    "hasTemperatureSensor": {
+      "@id": "smacovidbase:hasTemperatureSensor",
+      "@type":"@id"
+    },
+    "hasOxygenSaturationSensor": {
+      "@id": "smacovidbase:hasOxygenSaturationSensor",
+      "@type":"@id"
+    },
+    "hasQuestionnaire": {
+      "@id": "smacovidbase:hasQuestionnaire",
+      "@type":"@id"
+    },
+    "hasWearable": {
+      "@id": "smacovidbase:hasWearable",
+      "@type":"@id"
+    },
+    "fitbitId": {
+      "@id": "smacovidbase:fitbitId",
+      "@type":"xsd:string"
     },
     "anosmia": {
       "@id": "smacovidbase:anosmia",
@@ -49,53 +70,68 @@
       "@id": "smacovidbase:contactCovid",
       "@type":"xsd:boolean"
     },
+    "cough": {
+      "@id": "smacovidbase:cough",
+      "@type":"xsd:boolean"
+    },
     "diarrhea": {
       "@id": "smacovidbase:diarrhea",
       "@type":"xsd:integer"
-    }
+    },
+    "dyspnoea": {
+      "@id": "smacovidbase:dyspnoea",
+      "@type":"xsd:boolean"
+    },
+    "usedBy": {
+      "@id": "smacovidbase:usedBy",
+      "@type":"@id"
+    },
+    "usingWearable": {
+      "@id": "smacovidbase:usingWearable",
+      "@type":"@id"
+    },
+    "connectionStartedAt": {
+      "@id": "smacovidbase:connectionStartedAt",
+      "@type":"DateTime"
+    },
+    "connectionFinishedAt": {
+      "@id": "smacovidbase:connectionFinishedAt",
+      "@type":"DateTime"
+    },
   },
   "@graph": [
     {
-      "@id": "smacovidbase:BloodPressure",
+      "@id": "smacovidbase:Sensor",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Blood Pressure measured by a Wearable device",
-      "rdfs:label": "BloodP",
+      "rdfs:comment": "Standard sensor unit to get values from different sensor types",
+      "rdfs:label": "Sensor",
       "rdfs:subClassOf": {
         "@id": "http://schema.org/Thing"
       }
     },
     {
-      "@id": "smacovidbase:HeartRate",
+      "@id": "smacovidbase:Wearable",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Heart Rate measured by a Wearable device",
-      "rdfs:label": "HeartR",
+      "rdfs:comment": "Wearable device used by a person, at a given time period",
+      "rdfs:label": "Wearable",
       "rdfs:subClassOf": {
         "@id": "http://schema.org/Thing"
       }
     },
     {
-      "@id": "smacovidbase:OxygenSaturation",
+      "@id": "smacovidbase:Connection",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Oxygen Saturation measured by a Wearable device",
-      "rdfs:label": "OxygenS",
+      "rdfs:comment": "Identifies the time period a certain person uses a certain wearable",
+      "rdfs:label": "Connection",
       "rdfs:subClassOf": {
         "@id": "http://schema.org/Thing"
       }
     },
     {
-      "@id": "smacovidbase:Temperature",
+      "@id": "smacovidbase:Questionnaire",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Temperature measured by a Wearable device",
-      "rdfs:label": "Temp",
-      "rdfs:subClassOf": {
-        "@id": "http://schema.org/Thing"
-      }
-    },
-    {
-      "@id": "smacovidbase:App",
-      "@type": "rdfs:Class",
-      "rdfs:comment": "An App is an information provider about about characteristics of its user",
-      "rdfs:label": "App",
+      "rdfs:comment": "An Questionnaire is an information provider about about characteristics of its user",
+      "rdfs:label": "Questionnaire",
       "rdfs:subClassOf": {
         "@id": "http://schema.org/Thing"
       }
@@ -116,23 +152,14 @@
       }
     },
     {
-      "@id": "smacovidbase:hasInfoAbout",
+      "@id": "smacovidbase:knowsAbout",
       "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
       "schema:domainIncludes": [
         {
-          "@id": "smacovidbase:App"
+          "@id": "smacovidbase:Questionnaire"
         },
         {
-          "@id": "smacovidbase:BloodPressure"
-        },
-        {
-          "@id": "smacovidbase:HeartRate"
-        },
-        {
-          "@id": "smacovidbase:OxygenSaturation"
-        },
-        {
-          "@id": "smacovidbase:Temperature"
+          "@id": "smacovidbase:Wearable"
         }
       ],
       "schema:rangeIncludes": [
@@ -140,8 +167,163 @@
           "@id": "schema:Person"
         }
       ],
-      "rdfs:comment": "Person using the App at the moment",
-      "rdfs:label": "hasInfoAbout"
+      "rdfs:comment": "Person using the Questionnaire/Wearable at the moment.",
+      "rdfs:label": "knowsAbout"
+    },
+    {
+      "@id": "smacovidbase:hasQuestionnaire",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Questionnaire"
+        }
+      ],
+      "rdfs:comment": "Identifies the questionnaire with information about a certain person.",
+      "rdfs:label": "hasQuestionnaire"
+    },
+    {
+      "@id": "smacovidbase:hasWearable",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "rdfs:comment": "Identifies the wearable a certain person is using.",
+      "rdfs:label": ""
+    },
+    {
+      "@id": "smacovidbase:usedBy",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "rdfs:comment": "Associates a wearable with the person using it.",
+      "rdfs:label": "usedBy"
+    },
+    {
+      "@id": "smacovidbase:usingWearable",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "rdfs:comment": "Associates a person with the wearable that person is using.",
+      "rdfs:label": "usingWearable"
+    },
+    {
+      "@id": "smacovidbase:hasBloodPressureSensor",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Sensor"
+        }
+      ],
+      "rdfs:comment": "Identifies the blood pressure sensor",
+      "rdfs:label": "hasBloodPressureSensor"
+    },
+    {
+      "@id": "smacovidbase:hasHeartRateSensor",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Sensor"
+        }
+      ],
+      "rdfs:comment": "Identifies the heart rate sensor",
+      "rdfs:label": "hasHeartRateSensor"
+    },
+    {
+      "@id": "smacovidbase:hasTemperatureSensor",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Sensor"
+        }
+      ],
+      "rdfs:comment": "Identifies the temperature sensor",
+      "rdfs:label": "hasTemperatureSensor"
+    },
+    {
+      "@id": "smacovidbase:hasOxygenSaturationSensor",
+      "@type": "https://uri.etsi.org/ngsi-ld/Relationship",
+      "schema:domainIncludes": [
+        {
+          "@id": "smacovidbase:Wearable"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "smacovidbase:Sensor"
+        }
+      ],
+      "rdfs:comment": "Identifies the oxygen saturation sensor",
+      "rdfs:label": "hasOxygenSaturationSensor"
     }
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
